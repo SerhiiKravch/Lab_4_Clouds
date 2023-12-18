@@ -1,0 +1,43 @@
+[
+  {
+    "name": "setup",
+    "scriptFile": "TelegramFunctions.dll",
+    "entryPoint": "LocalFunctionProj.SetUpBot.RunAsync",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "In",
+        "authLevel": "Anonymous",
+        "methods": [
+          "get",
+          "post"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "handleupdate",
+    "scriptFile": "TelegramFunctions.dll",
+    "entryPoint": "LocalFunctionProj.SetUpBot.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "In",
+        "authLevel": "Anonymous",
+        "methods": [
+          "post"
+        ]
+      }
+    ]
+  }
+]
